@@ -233,6 +233,23 @@ const Members = styled("div")`
   `}
 `;
 
+const MembersTitle = styled(Typography)`
+  font-size: 30px;
+  color: ${({ theme }) => theme.palette.text.primary};
+  font-weight: 800;
+  line-height: 40px;
+  text-align: center;
+  max-width: 800px;
+
+  ${({ theme }) => `
+  ${theme.breakpoints.down("sm")}{
+    text-align: center;  
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: ${theme.spacing(4)};
+  }
+  `}
+`;
 const MemberImage = styled("img")`
   width: auto;
   height: 400px;
@@ -318,9 +335,11 @@ const LoaderComponent: React.FC = () => {
         </LeaderTexts>
       </Leader>
       <Members>
-        <LeaderTitle>
-          OUR CHURCH FAMILY: DIVERSE, UNITED, AND FULL OF LOVE
-        </LeaderTitle>
+        <MembersTitle>
+          OUR CHURCH FAMILY:
+          <br />
+          DIVERSE, UNITED, AND FULL OF LOVE
+        </MembersTitle>
         <MemberContent>
           <MemberItem>
             <MemberImage src="collage-1.jpeg" />
