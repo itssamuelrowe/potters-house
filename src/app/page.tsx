@@ -60,6 +60,7 @@ const Title = styled(Typography)`
   font-weight: 800;
   max-width: 600px;
   line-height: 46px;
+  color: white;
 
   ${({ theme }) => `
   ${theme.breakpoints.down("sm")}{
